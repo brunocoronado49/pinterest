@@ -1,7 +1,6 @@
 {
   "name": "pinterest",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -27,5 +26,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunocoronado49/pinterest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brunocoronado49/pinterest/issues"
+  },
+  "homepage": "https://github.com/brunocoronado49/pinterest#readme",
+  "description": ""
 }
