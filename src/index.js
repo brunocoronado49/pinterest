@@ -3,6 +3,8 @@ import path from 'path';
 import morgan from 'morgan';
 import indexRoute from './routes/index.js';
 import { __dirname } from './configDirname.js';
+import './database/database.js'
+import { format } from 'timeago.js';
 
 // Inicializaciones
 const app = express();
@@ -17,6 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 // ajustes
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use((req, res, next) => {
+    app.locals.format = format;
+    next();
+});
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
